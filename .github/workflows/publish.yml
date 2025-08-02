@@ -46,6 +46,10 @@ jobs:
         run: npm version patch --no-git-tag-version
         working-directory: packages/ui-base
 
+      - name: Show version
+        run: npm version --json
+        working-directory: packages/ui-base
+
       - name: Commit version bump
         run: |
           git add packages/ui-base/package.json
