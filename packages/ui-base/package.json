@@ -66,7 +66,7 @@
     "postcss-whitespace.cjs"
   ],
   "scripts": {
-    "build": "pnpm build:js && pnpm build:css",
+    "build": "rm -rf dist && pnpm build:js && pnpm build:css",
     "build:js": "pnpm build:js:cjs && pnpm build:js:esm && pnpm build:js:cjs:types && pnpm build:js:esm:types",
     "build:js:cjs": "node scripts/esbuild-cjs.js",
     "build:js:cjs:types": "tsc --outdir dist/cjs",
@@ -113,8 +113,8 @@
   "peerDependencies": {
     "@types/react": "*",
     "@types/react-dom": "*",
-    "react": "^19.0 || ^19.0.0-rc",
-    "react-dom": "^19.0 || ^19.0.0-rc"
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
   },
   "peerDependenciesMeta": {
     "@types/react": {
@@ -144,8 +144,8 @@
     "postcss-discard-empty": "6.0.1",
     "postcss-import": "16.0.0",
     "postcss-nesting": "12.0.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
     "storybook": "^9.1.0",
     "stylelint": "16.6.1",
     "typescript": "^5.7.2",
