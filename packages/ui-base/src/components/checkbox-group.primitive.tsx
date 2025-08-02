@@ -71,7 +71,7 @@ const CheckboxGroup = React.forwardRef<CheckboxGroupElement, CheckboxGroupProps>
     const direction = useDirection(dir);
     const [value = [], setValue] = useControllableState({
       prop: valueProp,
-      defaultProp: defaultValue,
+      defaultProp: defaultValue ?? [],
       onChange: onValueChange,
     });
 

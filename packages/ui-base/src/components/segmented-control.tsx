@@ -39,7 +39,7 @@ const SegmentedControlRoot = React.forwardRef<HTMLDivElement, SegmentedControlRo
     const [value, setValue] = useControllableState({
       prop: valueProp,
       onChange: onValueChangeProp,
-      defaultProp: defaultValueProp,
+      defaultProp: defaultValueProp ?? '',
     });
 
     return (

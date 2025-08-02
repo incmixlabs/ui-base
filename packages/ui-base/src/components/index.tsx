@@ -48,7 +48,7 @@ export * as Select from './select.js';
 export { Separator, type SeparatorProps } from './separator.js';
 export { Skeleton, type SkeletonProps } from './skeleton.js';
 export { Slider, type SliderProps } from './slider.js';
-export { Slot, Slottable } from './slot.js';
+export { Slot } from './slot.js';
 export { Spinner, type SpinnerProps } from './spinner.js';
 export { Strong, type StrongProps } from './strong.js';
 export { Switch, type SwitchProps } from './switch.js';
