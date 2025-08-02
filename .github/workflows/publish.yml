@@ -3,7 +3,7 @@ name: Publish to NPM
 on:
   push:
     branches:
-      - release
+      - main
   workflow_dispatch:
 
 jobs:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -34,6 +36,25 @@ jobs:
       - name: Run lint
         run: pnpm lint
         working-directory: packages/ui-base
+
+      - name: Configure git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Bump version
+        run: npm version patch --no-git-tag-version
+        working-directory: packages/ui-base
+
+      - name: Show version
+        run: npm version --json
+        working-directory: packages/ui-base
+
+      - name: Commit version bump
+        run: |
+          git add packages/ui-base/package.json
+          git commit -m "chore: bump version [skip ci]"
+          git push
 
       - name: Publish to NPM
         run: pnpm publish --no-git-checks
