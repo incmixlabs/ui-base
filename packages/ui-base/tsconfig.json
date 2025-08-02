@@ -12,5 +12,6 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "verbatimModuleSyntax": true
-  }
+  },
+  "exclude": ["**/*.stories.tsx", ".storybook/**/*", "src/stories/**/*"]
 }
