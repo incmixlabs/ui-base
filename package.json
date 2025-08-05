@@ -1,7 +1,7 @@
 {
   "name": "monorepo",
   "private": true,
-  "packageManager": "pnpm@10.0.0",
+  "packageManager": "pnpm@10.14.0",
   "scripts": {
     "build": "turbo run build",
     "build:pkg": "pnpm --filter @incmix/ui-base build",
@@ -24,6 +24,9 @@
     "overrides": {
       "string-width": "4.2.3"
     },
-    "onlyBuiltDependencies": ["esbuild", "sharp"]
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }
