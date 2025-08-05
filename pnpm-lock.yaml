@@ -63,9 +63,6 @@ importers:
 
   packages/radix-ui:
     dependencies:
-      '@incmix/radix-ui':
-        specifier: 'link:'
-        version: 'link:'
       '@radix-ui/colors':
         specifier: 3.0.0
         version: 3.0.0

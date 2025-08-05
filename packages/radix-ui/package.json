@@ -105,7 +105,6 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@incmix/radix-ui": "link:",
     "@radix-ui/colors": "3.0.0",
     "@radix-ui/react-accessible-icon": "^1.1.7",
     "@radix-ui/react-alert-dialog": "1.1.14",
