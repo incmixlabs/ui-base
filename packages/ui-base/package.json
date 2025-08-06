@@ -68,7 +68,8 @@
   "scripts": {
     "build": "rm -rf dist && tsc -p tsconfig.json --outDir dist",
     "typecheck": "tsc",
-    "prepublishOnly": "pnpm lint",
+    "dev": "pnpm run build && pnpm watch & pnpm storybook",
+    "watch": "tsc -p tsconfig.json --outDir dist --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -78,10 +79,10 @@
     "classnames": "^2.3.2"
   },
   "peerDependencies": {
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "react": "19.1.1",
-    "react-dom": "19.1.1"
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "peerDependenciesMeta": {
     "@types/react": {
@@ -92,31 +93,31 @@
     }
   },
   "devDependencies": {
-    "@eslint/js": "^9.18.0",
-    "@storybook/addon-docs": "^9.1.0",
-    "@storybook/addon-onboarding": "^9.1.0",
-    "@storybook/react-vite": "^9.1.0",
-    "autoprefixer": "10.4.19",
-    "esbuild": "0.20.0",
-    "eslint": "^9.18.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-storybook": "^9.1.0",
-    "globals": "^15.14.0",
-    "postcss": "8.4.33",
-    "postcss-cli": "11.0.0",
-    "postcss-combine-duplicated-selectors": "10.0.3",
-    "postcss-custom-media": "10.0.2",
-    "postcss-discard-empty": "6.0.1",
-    "postcss-import": "16.0.0",
-    "postcss-nesting": "12.0.2",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
-    "storybook": "^9.1.0",
-    "stylelint": "16.6.1",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.18.1"
+    "@eslint/js": "catalog:",
+    "@storybook/addon-docs": "catalog:",
+    "@storybook/addon-onboarding": "catalog:",
+    "@storybook/react-vite": "catalog:",
+    "autoprefixer": "catalog:",
+    "esbuild": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-jsx-a11y": "catalog:",
+    "eslint-plugin-react": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-storybook": "catalog:",
+    "globals": "catalog:",
+    "postcss": "catalog:",
+    "postcss-cli": "catalog:",
+    "postcss-combine-duplicated-selectors": "catalog:",
+    "postcss-custom-media": "catalog:",
+    "postcss-discard-empty": "catalog:",
+    "postcss-import": "catalog:",
+    "postcss-nesting": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "storybook": "catalog:",
+    "stylelint": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
   },
   "homepage": "https://radix-ui.com/themes",
   "repository": {
