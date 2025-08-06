@@ -1,7 +1,10 @@
 import esbuild from 'esbuild';
 import fs from 'fs';
 import path from 'path';
-import pkg from '../package.json' with { type: 'json' };
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf-8'));
 
 const dir = 'dist/esm';
 

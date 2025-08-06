@@ -13,11 +13,18 @@ const Primitive = BasePrimitive as typeof BasePrimitive & {
 Primitive.dispatchDiscreteCustomEvent = dispatchDiscreteCustomEvent;
 Primitive.Root = BasePrimitive;
 export { Primitive };
-declare function composeEventHandlers<E extends {
+function composeEventHandlers<E extends {
     defaultPrevented: boolean;
-}>(originalEventHandler?: (event: E) => void, ourEventHandler?: (event: E) => void, { checkForDefaultPrevented }?: {
+}>(originalEventHandler?: (event: E) => void, ourEventHandler?: (event: E) => void, options: {
     checkForDefaultPrevented?: boolean | undefined;
-}): (event: E) => void;
+} = { checkForDefaultPrevented: true }): (event: E) => void {
+  return function handleEvent(event: E) {
+    originalEventHandler?.(event);
+    if (!options.checkForDefaultPrevented || !event.defaultPrevented) {
+      ourEventHandler?.(event);
+    }
+  };
+}
 
 export { composeEventHandlers };
 

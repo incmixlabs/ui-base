@@ -1,3 +1,2 @@
-import { AspectRatio as AspectRatioPrimitive } from 'radix-ui';
-export const AspectRatio = AspectRatioPrimitive.Root;
-export type AspectRatioProps = AspectRatioPrimitive.AspectRatioProps;
+export { AspectRatio } from '@incmix/radix-ui';
+export type { AspectRatioProps } from '@incmix/radix-ui';

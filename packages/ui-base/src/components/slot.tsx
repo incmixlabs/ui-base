@@ -1,3 +1,2 @@
-import { Slot as SlotPrimitive } from 'radix-ui';
-export const Root = SlotPrimitive.Root;
-export const Slot = SlotPrimitive.Root;
+export { Slot } from '@incmix/radix-ui';
+export type { Slot as SlotProps } from '@incmix/radix-ui';
