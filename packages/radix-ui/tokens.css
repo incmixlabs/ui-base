@@ -3370,12 +3370,10 @@
     }
   }
 }
-.radix-themes:where(.light, .light-theme),
-  :root:where(:has(.radix-themes[data-is-root-theme='true']:where(.light, .light-theme))) {
+.radix-themes:where(.light,.light-theme),:root:where(:has([data-is-root-theme='true']:is(.radix-themes:where(.light,.light-theme)))) {
   color-scheme: light;
 }
-.radix-themes:where(.dark, .dark-theme),
-  :root:where(:has(.radix-themes[data-is-root-theme='true']:where(.dark, .dark-theme))) {
+.radix-themes:where(.dark,.dark-theme),:root:where(:has([data-is-root-theme='true']:is(.radix-themes:where(.dark,.dark-theme)))) {
   color-scheme: dark;
 }
 .radix-themes,
